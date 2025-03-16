@@ -361,9 +361,9 @@
                     <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('ki-assistent')">
                         <i class="fas fa-brain mr-2"></i>KI BERATER
                     </button>
-                    <a href="https://zaha175.github.io/GEHIRNFIT/" target="_blank" rel="noopener" class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center">
+                    <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('gehirnfit')">
                         <i class="fas fa-brain mr-2"></i>GEHIRNFIT
-                    </a>
+                    </button>
                 </div>
             </section>
 
@@ -1349,6 +1349,40 @@
                         Personalisierte Beratung starten
                     </a>
                 </div>
+            `,
+            
+            'gehirnfit': `
+                <h3 class="text-xl font-heading font-bold mb-4">GEHIRNFIT - Kognitive Fitness und Gehirntraining</h3>
+                <p class="mb-4">Trainieren Sie Ihr Gehirn mit unserem speziellen GEHIRNFIT-Programm. Regelmäßiges Training verbessert die kognitive Leistungsfähigkeit und kann zur Verzögerung altersbedingter geistiger Abbauprozesse beitragen.</p>
+                
+                <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden mb-6">
+                    <div class="w-full h-[600px]">
+                        <iframe src="https://zaha175.github.io/GEHIRNFIT/" width="100%" height="100%" frameborder="0" class="w-full h-full"></iframe>
+                    </div>
+                </div>
+                
+                <div class="bg-neutral-100 dark:bg-neutral-900 p-4 rounded-lg mb-6">
+                    <h4 class="font-heading font-semibold mb-2">Vorteile regelmäßigen Gehirntrainings:</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300">
+                        <li>Verbesserung der kognitiven Funktionen wie Gedächtnis, Aufmerksamkeit und Konzentration</li>
+                        <li>Stärkung neuronaler Verbindungen und Förderung der Neuroplastizität</li>
+                        <li>Unterstützung der Gehirngesundheit und mögliche Verzögerung altersbedingter Abbauprozesse</li>
+                        <li>Steigerung der geistigen Flexibilität und Problemlösungsfähigkeit</li>
+                    </ul>
+                </div>
+                
+                <p class="text-center text-neutral-600 dark:text-neutral-400 italic mb-6">
+                    "Das Gehirn ist wie ein Muskel - regelmäßiges Training hält es fit und leistungsfähig bis ins hohe Alter."
+                </p>
+                
+                <div class="flex justify-center gap-4">
+                    <button onclick="openModal('leistungstests')" class="btn-3d bg-altBlue hover:bg-altBlue-light text-white py-3 px-4 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center">
+                        <i class="fas fa-dumbbell mr-2"></i>Weitere Trainings
+                    </button>
+                    <a href="https://zaha175.github.io/GEHIRNFIT/" target="_blank" rel="noopener" class="btn-3d bg-primary hover:bg-primary-dark text-white py-3 px-4 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-primary-dark flex items-center justify-center">
+                        <i class="fas fa-external-link-alt mr-2"></i>In neuem Tab öffnen
+                    </a>
+                </div>
             `
         };
 
@@ -1409,7 +1443,8 @@
                     'atemuebungen': 'Atemübungen',
                     'ki-assistent': 'Alterungsstopp KI Berater',
                     'stresul': 'Stressmanagement',
-                    'arborul-mpu': 'Entscheidungsbaum'
+                    'arborul-mpu': 'Entscheidungsbaum',
+                    'gehirnfit': 'GEHIRNFIT - Kognitive Fitness'
                 };
                 
                 modalTitle.textContent = titles[contentId] || 'Information';
