@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUNGSINGULÄR – Bewusst gesund und jung bleiben</title>
+    <meta name="description"
+        content="Die führende Plattform für wissenschaftlich fundierte Informationen über Alterungsprozesse und effektive Gegenmaßnahmen für ein längeres, gesünderes Leben.">
+    <meta name="keywords" content="Alterung, Alterungsprozesse, Langlebigkeit, Anti-Aging, Gesundheit, Lebensverlängerung, Vitalität, Zellalterung, Biohacking, Gesundheitsoptimierung">
+    <meta name="robots" content="index, follow">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#5D5CDE',
+                            dark: '#4A49B0',
+                            light: '#7F7EE6'
+                        },
+                        secondary: {
+                            DEFAULT: '#FFD700',
+                            dark: '#E6C200',
+                            light: '#FFDE33'
+                        },
+                        altBlue: {
+                            DEFAULT: '#002244', // Dunkler gemacht
+                            dark: '#001933', 
+                            light: '#003366'
+                        },
+                        neutral: {
+                            50: '#f8f8f8',
+                            100: '#f2f2f2',
+                            200: '#e6e6e6',
+                            800: '#333333',
+                            900: '#1a1a1a'
+                        },
+                        darkBg: '#0a1929', // Dunkleres Blau für Dark-Mode
+                        darkCard: '#102a43',
+                        darkBorder: '#444444'
+                    },
+                    fontFamily: {
+                        'sans': ['Montserrat', 'Roboto', 'sans-serif'],
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Roboto', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'custom': '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)',
+                        'custom-lg': '0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05)',
+                        'custom-xl': '0 20px 25px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.04)',
+                        'custom-inner': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'bounce-slow': 'bounce 2s infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            scroll-behavior: smooth;
+            transition: background-color 0.3s, color 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        .dark body {
+            background-color: #0a1929;
+        }
+
+        /* Background Image with Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cdn.gamma.app/fhpleqvbjim2f32/df58484a6bb54b858b64d0abddab5ae1/original/image-1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
+            opacity: 0.06;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        body.dark::before {
+            opacity: 0.04;
+        }
+
+        /* 3D Button Effect */
+        .btn-3d {
+            position: relative;
+            border-bottom-width: 4px;
+            transform-style: preserve-3d;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s;
+            will-change: transform;
+        }
+
+        .btn-3d:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-3d:active {
+            transform: translateY(0);
+            border-bottom-width: 2px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Modal Animation */
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translate(-50%, -40%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
+        }
+
+        .modal-visible {
+            animation: modalFadeIn 0.3s forwards;
+            display: block !important;
+        }
+
+        /* Shimmer Effect for Loading States */
+        .shimmer {
+            background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.2), rgba(255,255,255,0));
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        .dark .shimmer {
+            background: linear-gradient(90deg, rgba(30,30,30,0), rgba(60,60,60,0.2), rgba(30,30,30,0));
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* Pulse Effect for Interactive Elements */
+        .pulse-effect:hover {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .menu-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Custom Component Styles */
+        .description img, .modal-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Chat Styles */
+        .chat-message {
+            padding: 0.75rem;
+            margin-bottom: 0.75rem;
+            border-radius: 0.5rem;
+            max-width: 85%;
+        }
+
+        .user-message {
+            background-color: #E6F7FF;
+            color: #003366;
+            margin-left: auto;
+            border-bottom-right-radius: 0;
+        }
+
+        .dark .user-message {
+            background-color: #1e293b;
+            color: #e0e0e0;
+        }
+
+        .bot-message {
+            background-color: #F0F0F0;
+            color: #333333;
+            margin-right: auto;
+            border-bottom-left-radius: 0;
+        }
+
+        .dark .bot-message {
+            background-color: #27272a;
+            color: #e0e0e0;
+        }
+
+        .typing-indicator {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background-color: #F0F0F0;
+            border-radius: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #888;
+            border-radius: 50%;
+            margin: 0 2px;
+            animation: typingAnimation 1.4s infinite ease-in-out;
+        }
+
+        .typing-dot:nth-child(1) { animation-delay: 0s; }
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typingAnimation {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-neutral-800 dark:bg-darkBg dark:text-neutral-100">
+    <!-- Header with Logo and Navigation -->
+    <header class="bg-altBlue text-secondary shadow-md relative z-10">
+        <div class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
+            <h1 class="text-xl md:text-2xl font-heading font-bold tracking-wider uppercase">
+                <span class="inline-flex items-center">
+                    <i class="fas fa-hourglass text-secondary mr-2"></i>
+                    JUNGSINGULÄR
+                </span>
+            </h1>
+            
+            <!-- Theme Toggle Button -->
+            <button id="themeToggleBtn" class="p-2 rounded-full bg-altBlue-dark hover:bg-altBlue-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary" aria-label="Theme Toggle">
+                <i class="fas fa-moon text-secondary hidden dark:inline-block"></i>
+                <i class="fas fa-sun text-secondary inline-block dark:hidden"></i>
+            </button>
+        </div>
+        
+        <!-- Tag Line -->
+        <div class="bg-gradient-to-r from-altBlue-dark via-altBlue to-altBlue-dark py-2 text-center">
+            <p class="text-sm md:text-base font-medium tracking-wide">Bewusst gesund und jung bleiben</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-6 flex-grow">
+        <main>
+            <!-- Menu Grid -->
+            <section class="mb-8">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+                    <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('header')">
+                        <i class="fas fa-home mr-2"></i>WILLKOMMEN
+                    </button>
+                    <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('ablauf')">
+                        <i class="fas fa-tasks mr-2"></i>ABLAUF
+                    </button>
+                    <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('leistungstests')">
+                        <i class="fas fa-tachometer-alt mr-2"></i>REAKTIONSTESTS
+                    </button>
+                    <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('mpu-qa')">
+                        <i class="fas fa-question-circle mr-2"></i>FRAGEN & ANTWORTEN
+                    </button>
+                    <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('promille-rechner')">
+                        <i class="fas fa-calculator mr-2"></i>RECHNER
+                    </button>
+                    <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('mpu-quiz')">
+                        <i class="fas fa-gamepad mr-2"></i>QUIZZE & SPIELE
+                    </button>
+                    <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('gutachtersimulator')">
+                        <i class="fas fa-robot mr-2"></i>SIMULATOR
+                    </button>
+                    <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('checkliste')">
+                        <i class="fas fa-clipboard-check mr-2"></i>CHECKLISTE
+                    </button>
+                    <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('frageboegen')">
+                        <i class="fas fa-robot mr-2"></i>KI & ZUKUNFT
+                    </button>
+                    <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('atemuebungen')">
+                        <i class="fas fa-wind mr-2"></i>ATEMÜBUNGEN
+                    </button>
+                    <button class="menu-item btn-3d bg-altBlue hover:bg-altBlue-light text-white py-4 px-3 rounded-lg text-sm md:text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('ki-assistent')">
+                        <i class="fas fa-brain mr-2"></i>KI BERATER
+                    </button>
+                </div>
+            </section>
+
+            <!-- Featured Content Preview Section -->
+            <section class="my-8 bg-white dark:bg-neutral-900 rounded-xl p-6 shadow-custom animate-fade-in">
+                <h2 class="text-2xl font-heading font-bold mb-4 text-center">Aktuelle Highlights</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Highlight Card 1 -->
+                    <div class="bg-white dark:bg-darkCard rounded-lg shadow-custom overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
+                        <div class="w-full h-48 bg-neutral-200 dark:bg-neutral-700 overflow-hidden">
+                            <img src="https://cdn.gamma.app/fhpleqvbjim2f32/generated-images/zgH0CSi2wvTWUDv7JSSOF.jpg" 
+                                alt="KI und Alterungsforschung" 
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-heading font-semibold text-lg mb-2">KI-gestützte Alterungsforschung</h3>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-4">Neueste Entwicklungen im Bereich der KI-basierten Diagnose und Therapie von Alterungsprozessen.</p>
+                            <button onclick="openModal('ki-assistent')" class="btn-3d bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark w-full">Mehr erfahren</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Highlight Card 2 -->
+                    <div class="bg-white dark:bg-darkCard rounded-lg shadow-custom overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
+                        <div class="w-full h-48 bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center">
+                            <i class="fas fa-heartbeat text-6xl text-primary"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-heading font-semibold text-lg mb-2">Alterungsstopp Simulator</h3>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-4">Erleben Sie ein simuliertes Gespräch mit unserem KI-Assistenten und erfahren Sie personalisierte Tipps.</p>
+                            <button onclick="openModal('gutachtersimulator')" class="btn-3d bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark w-full">Zum Simulator</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Highlight Card 3 -->
+                    <div class="bg-white dark:bg-darkCard rounded-lg shadow-custom overflow-hidden transition-transform duration-300 hover:transform hover:scale-105">
+                        <div class="w-full h-48 bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center">
+                            <i class="fas fa-calculator text-6xl text-primary"></i>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-heading font-semibold text-lg mb-2">Biologisches Alter berechnen</h3>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-300 mb-4">Nutzen Sie unseren fortschrittlichen Rechner, um Ihr biologisches Alter zu ermitteln.</p>
+                            <button onclick="openModal('promille-rechner')" class="btn-3d bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark w-full">Zum Rechner</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Quick Access Modules -->
+            <section class="flex flex-wrap justify-center gap-4 my-8">
+                <button class="module btn-3d bg-altBlue hover:bg-altBlue-light text-secondary py-3 px-6 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('stresul')">
+                    <i class="fas fa-heartbeat mr-2"></i>STRESS
+                </button>
+                <button class="module btn-3d bg-altBlue hover:bg-altBlue-light text-secondary py-3 px-6 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center" onclick="openModal('arborul-mpu')">
+                    <i class="fas fa-sitemap mr-2"></i>ENTSCHEIDUNGSBAUM
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbot-widget" class="fixed bottom-6 right-6 z-50">
+        <button id="chatbot-toggle" class="btn-3d flex items-center justify-center px-4 py-3 bg-primary hover:bg-primary-dark text-white rounded-full shadow-custom transition-colors duration-300 border-b-4 border-primary-dark">
+            <i class="fas fa-robot mr-2"></i>
+            <span>KI-Assistent</span>
+        </button>
+        
+        <div id="chatbot-container" class="hidden bg-white dark:bg-neutral-900 rounded-xl shadow-custom-xl w-80 md:w-96 h-[500px] overflow-hidden flex flex-col" style="position: fixed; bottom: 5rem; right: 1.5rem;">
+            <!-- Chat Header -->
+            <div class="bg-primary px-4 py-3 text-white flex justify-between items-center">
+                <h3 class="font-medium">JUNGSINGULÄR KI-Assistent</h3>
+                <button id="close-chat" class="text-white hover:text-neutral-200 transition-colors">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Chat Messages Area -->
+            <div id="chat-messages" class="flex-grow p-4 overflow-y-auto">
+                <div class="bot-message chat-message">
+                    <p>Willkommen! Ich bin Ihr JUNGSINGULÄR KI-Assistent. Wie kann ich Ihnen heute mit Fragen zur Alterungsforschung helfen?</p>
+                </div>
+                <!-- Messages will be added here dynamically -->
+            </div>
+            
+            <!-- Chat Input -->
+            <div class="p-3 border-t border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800">
+                <div class="flex">
+                    <input type="text" id="chat-input" placeholder="Ihre Frage..." class="flex-grow px-4 py-2 border border-neutral-300 dark:border-neutral-600 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-primary dark:bg-neutral-700 dark:text-white text-base">
+                    <button id="send-btn" class="btn-3d bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-r-lg border-b-2 border-primary-dark">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button for Quick Help -->
+    <button id="help-btn" class="fixed bottom-6 left-6 z-40 btn-3d flex items-center justify-center p-3 bg-primary hover:bg-primary-dark text-white rounded-full shadow-custom-lg transition-all duration-300 border-b-4 border-primary-dark">
+        <i class="fas fa-question"></i>
+    </button>
+
+    <!-- Modal Overlay and Container -->
+    <div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden"></div>
+    
+    <div id="main-modal" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-4xl max-h-[90vh] overflow-y-auto bg-white dark:bg-neutral-900 rounded-xl shadow-custom-xl z-50 hidden">
+        <div class="sticky top-0 z-10 flex justify-between items-center p-4 border-b border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900">
+            <h2 id="modal-title" class="text-xl font-heading font-bold text-neutral-800 dark:text-white">Modalfenster Titel</h2>
+            <button class="modal-close text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-white transition-colors">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+        
+        <div id="modal-content" class="modal-content p-6">
+            <!-- Modal content will be loaded here -->
+            <div class="animate-pulse">
+                <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-4"></div>
+                <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/2 mb-4"></div>
+                <div class="h-32 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
+                <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6 mb-2"></div>
+                <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-4/6 mb-2"></div>
+                <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/6 mb-4"></div>
+                <div class="h-10 bg-gray-200 dark:bg-gray-700 rounded w-1/4 mt-6"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-md bg-white dark:bg-neutral-900 rounded-xl shadow-custom-xl z-50 hidden animate-fade-in">
+        <div class="p-6">
+            <h3 class="text-xl font-heading font-bold mb-4 text-neutral-800 dark:text-white">Benötigen Sie Hilfe?</h3>
+            <p class="mb-4 text-neutral-600 dark:text-neutral-300">Sie können unseren KI-Assistenten nutzen, um Fragen zur Alterungsforschung zu stellen oder durch die Module navigieren.</p>
+            
+            <div class="space-y-3 mb-6">
+                <div class="flex items-start">
+                    <i class="fas fa-robot mt-1 mr-3 text-primary"></i>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-300">Klicken Sie auf den KI-Assistent Button, um Fragen zu stellen.</p>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-th-large mt-1 mr-3 text-primary"></i>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-300">Nutzen Sie die Menükacheln, um zu den verschiedenen Inhalten zu navigieren.</p>
+                </div>
+                <div class="flex items-start">
+                    <i class="fas fa-sun mt-1 mr-3 text-primary"></i>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-300">Mit dem Theme-Toggle können Sie zwischen Hell- und Dunkelmodus wechseln.</p>
+                </div>
+            </div>
+            
+            <button id="close-help" class="btn-3d w-full bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">Verstanden</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Alle Modalinhalte hier definieren, damit sie sicher geladen werden
+        const modalContents = {
+            'header': `
+                <h3 class="text-xl font-heading font-bold mb-4">Willkommen auf der JUNGSINGULÄR-Plattform</h3>
+                <p class="mb-4">Entdecken Sie die Geheimnisse eines langen und gesunden Lebens. Unsere Plattform bietet Ihnen fundierte wissenschaftliche Erkenntnisse und praktische Methoden, um Ihr biologisches Alter zu optimieren.</p>
+                
+                <div class="video-container mb-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/t2u1C2llfEk?si=mQ68swSe4a4VdsoM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <div class="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-lg mb-6">
+                    <h4 class="font-heading font-semibold mb-2">Die 5 Säulen der Langlebigkeit:</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Optimierte Ernährung und Supplementierung</li>
+                        <li>Präzises körperliches Training</li>
+                        <li>Regenerativer Schlaf und Stressmanagement</li>
+                        <li>Mentale Fitness und kognitive Stimulation</li>
+                        <li>Biotracking und personalisierte Intervention</li>
+                    </ul>
+                </div>
+                
+                <p class="italic text-neutral-600 dark:text-neutral-400 text-sm">
+                    "Das chronologische Alter ist nur eine Zahl. Ihr biologisches Alter können Sie selbst beeinflussen."
+                </p>
+                
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <button onclick="openModal('ablauf')" class="btn-3d bg-altBlue hover:bg-altBlue-light text-white py-3 px-4 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center">
+                        <i class="fas fa-arrow-right mr-2"></i>Zum Ablauf
+                    </button>
+                    <button onclick="openModal('ki-assistent')" class="btn-3d bg-altBlue hover:bg-altBlue-light text-white py-3 px-4 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark flex items-center justify-center">
+                        <i class="fas fa-robot mr-2"></i>KI-Assistent befragen
+                    </button>
+                </div>
+            `,
+            
+            'ablauf': `
+                <h3 class="text-xl font-heading font-bold mb-4">JUNGSINGULÄR ABLAUF DER VORBEREITUNG</h3>
+                
+                <div class="video-container mb-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-heading font-semibold mb-2">JUNGSINGULÄR APP - ALTERUNGSSTOPP APP</h4>
+                    <p class="mb-4">Nutzen Sie unsere APP für eine umfassende Analyse und personalisierte Empfehlungen.</p>
+                    <a href="https://zaha175.github.io/VIVAVITALAPP/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-primary-dark mb-4">
+                        JUNGSINGULÄR APP ÖFFNEN
+                        <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-lg mb-6">
+                    <h4 class="font-heading font-semibold mb-3">Ihr Weg zu einem jüngeren biologischen Alter:</h4>
+                    <ol class="list-decimal pl-5 space-y-2">
+                        <li>Durchführung eines umfassenden biologischen Alters-Assessments</li>
+                        <li>Identifikation Ihrer persönlichen Alterungsbeschleuniger</li>
+                        <li>Erstellung eines individualisierten Interventionsplans</li>
+                        <li>Integration von täglichen Gewohnheiten und Routinen</li>
+                        <li>Regelmäßiges Biotracking und Anpassung der Strategie</li>
+                    </ol>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-4 mt-6">
+                    <a href="https://chatgpt.com/g/g-677af416fb60819181c3a699f2915aa2-alterungsstopp-berater" target="_blank" rel="noopener" class="btn-3d flex-1 inline-flex items-center justify-center bg-altBlue hover:bg-altBlue-light text-white py-3 px-4 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark">
+                        ALTERUNGSSTOPP KI Berater
+                        <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                    <button onclick="openModal('leistungstests')" class="btn-3d flex-1 inline-flex items-center justify-center bg-altBlue hover:bg-altBlue-light text-white py-3 px-4 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark">
+                        Zu den Leistungstests
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            `,
+            
+            'leistungstests': `
+                <h3 class="text-xl font-heading font-bold mb-4">JUNGSINGULÄR REAKTIONSTESTS</h3>
+                <p class="mb-4">Testen und verbessern Sie Ihre kognitiven Fähigkeiten mit unseren spezialisierten Reaktionstests.</p>
+                
+                <div class="video-container mb-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-4 mb-6">
+                    <h4 class="font-heading font-semibold mb-3 text-lg">Verfügbare Tests:</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <h5 class="font-medium mb-2">Figurenvergleichstests</h5>
+                            <div class="flex flex-col gap-2">
+                                <a href="https://zaha175.github.io/FIGURENVERGLEICHSTEST/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                    <i class="fas fa-shapes mr-2"></i>Figurentest 1
+                                </a>
+                                <a href="https://zaha175.github.io/FIGURENVERGLEICHSTEST1/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                    <i class="fas fa-shapes mr-2"></i>Figurentest 2
+                                </a>
+                                <a href="https://zaha175.github.io/FIGURENVERGLEICHSTEST2/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                    <i class="fas fa-shapes mr-2"></i>Figurentest 3
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <h5 class="font-medium mb-2">Farbentests</h5>
+                            <div class="flex flex-col gap-2">
+                                <a href="https://zaha175.github.io/FARBENTEST1/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                    <i class="fas fa-palette mr-2"></i>Farbentest 1
+                                </a>
+                                <a href="https://zaha175.github.io/FARBENTEST2/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                    <i class="fas fa-palette mr-2"></i>Farbentest 2
+                                </a>
+                                <a href="https://zaha175.github.io/FARBENTEST3/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                    <i class="fas fa-palette mr-2"></i>Farbentest 3
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <h5 class="font-medium mb-2">Farbenfigurentests</h5>
+                            <div class="flex flex-col gap-2">
+                                <a href="https://zaha175.github.io/FARBFIGURENVERGLEICHSTESTULTRA/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                    <i class="fas fa-object-group mr-2"></i>Farbenfigurentest 1
+                                </a>
+                                <a href="https://zaha175.github.io/FARBFIGURENVERGLEICHSTEST3DULTRA/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                    <i class="fas fa-object-group mr-2"></i>Farbenfigurentest 2
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <h5 class="font-medium mb-2">Konzentrationstests</h5>
+                            <div class="flex flex-col gap-2">
+                                <a href="https://zaha175.github.io/Verkehrssituationstext/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                    <i class="fas fa-brain mr-2"></i>Konzentrationstest 1
+                                </a>
+                                <a href="https://zaha175.github.io/PUZZLEBILDAPP/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                    <i class="fas fa-brain mr-2"></i>Konzentrationstest 2
+                                </a>
+                                <a href="https://zaha175.github.io/PUZZLEVERKEHRSBILD3D/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                    <i class="fas fa-brain mr-2"></i>Konzentrationstest 3
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg mt-4">
+                        <h5 class="font-medium mb-2">Mehrfachsituationstests</h5>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <a href="https://zaha175.github.io/MERHFACHSITUATIONSTEST/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                <i class="fas fa-tasks mr-2"></i>Mehrfachtest 1
+                            </a>
+                            <a href="https://zaha175.github.io/MEHRFACHSITUATIONSTEST1/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                <i class="fas fa-tasks mr-2"></i>Mehrfachtest 2
+                            </a>
+                            <a href="https://zaha175.github.io/MEHRFACHSITUATIONSTEST2/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-3 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                <i class="fas fa-tasks mr-2"></i>Mehrfachtest 3
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="mt-4">Regelmäßiges Training verbessert kognitive Funktionen und kann den Alterungsprozess des Gehirns verlangsamen. Wir empfehlen mindestens 15 Minuten tägliches Training.</p>
+                
+                <div class="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-lg mt-6">
+                    <h4 class="font-heading font-semibold">Warum kognitive Tests wichtig sind:</h4>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>Frühzeitige Erkennung kognitiver Veränderungen</li>
+                        <li>Verbesserung der Reaktionsgeschwindigkeit und Aufmerksamkeit</li>
+                        <li>Stärkung der neuronalen Verbindungen im Gehirn</li>
+                        <li>Förderung der geistigen Flexibilität und Anpassungsfähigkeit</li>
+                    </ul>
+                </div>
+            `,
+            
+            'mpu-qa': `
+                <h3 class="text-xl font-heading font-bold mb-4">JUNGSINGULÄR ALTERUNGSSTOPP-APP: FRAGEN UND ANTWORTEN</h3>
+                <p class="mb-4">Hier finden Sie fundierte Antworten auf die häufigsten Fragen rund um Alterungsprozesse und deren Prävention.</p>
+                
+                <div class="video-container mb-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-5 mb-6">
+                    <h4 class="font-heading font-semibold mb-4">Häufig gestellte Fragen:</h4>
+                    
+                    <div class="space-y-4">
+                        <div class="border-b border-neutral-200 dark:border-neutral-700 pb-3">
+                            <h5 class="font-medium text-primary mb-1">Was ist biologisches Alter?</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300">Das biologische Alter bezieht sich auf den physiologischen Zustand Ihres Körpers im Vergleich zum durchschnittlichen Zustand von Menschen Ihres chronologischen Alters. Es wird durch verschiedene Biomarker wie Telomerlänge, DNA-Methylierung und mitochondriale Funktion bestimmt.</p>
+                        </div>
+                        
+                        <div class="border-b border-neutral-200 dark:border-neutral-700 pb-3">
+                            <h5 class="font-medium text-primary mb-1">Kann man den Alterungsprozess wirklich verlangsamen?</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300">Ja, aktuelle Forschungen zeigen, dass durch gezielte Interventionen in Bereichen wie Ernährung, Bewegung, Schlaf und Stressmanagement der biologische Alterungsprozess verlangsamt werden kann. Epigenetische Studien belegen, dass biologisches Alter reversibel ist.</p>
+                        </div>
+                        
+                        <div class="border-b border-neutral-200 dark:border-neutral-700 pb-3">
+                            <h5 class="font-medium text-primary mb-1">Welche Rolle spielt Ernährung beim Alterungsprozess?</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300">Ernährung hat einen signifikanten Einfluss auf Alterungsprozesse. Kalorienrestriktion, intermittierendes Fasten und bestimmte Ernährungsformen wie die mediterrane oder pflanzenbetonte Ernährung haben in Studien gezeigt, dass sie lebensverlängernde Signalwege aktivieren können.</p>
+                        </div>
+                        
+                        <div class="border-b border-neutral-200 dark:border-neutral-700 pb-3">
+                            <h5 class="font-medium text-primary mb-1">Welche Nahrungsergänzungsmittel sind für die Langlebigkeit relevant?</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300">Wissenschaftlich unterstützte Substanzen umfassen NAD+-Vorstufen (NMN, NR), Resveratrol, Spermidin, bestimmte Adaptogene, Quercetin und Fisetin. Die Wirksamkeit ist jedoch individuell unterschiedlich und sollte mit einem Fachmann besprochen werden.</p>
+                        </div>
+                        
+                        <div class="pb-3">
+                            <h5 class="font-medium text-primary mb-1">Wie wirkt sich Stress auf die Zellalterung aus?</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300">Chronischer Stress beschleunigt die Zellalterung durch verschiedene Mechanismen: erhöhte oxidative Schäden, Telomerverkürzung, chronische Entzündungsprozesse und epigenetische Veränderungen. Stressmanagement-Techniken sind daher ein wichtiger Bestandteil jeder Langlebigkeitsstrategie.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6">
+                    <h4 class="font-heading font-semibold mb-3">Weiterführende Ressourcen:</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <a href="https://zaha175.github.io/ALTERUNGSSTOPPAPP/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-altBlue hover:bg-altBlue-light text-white py-3 px-4 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark">
+                            <i class="fas fa-question-circle mr-2"></i>
+                            Komplettes Fragen & Antworten System
+                        </a>
+                        <a href="https://zaha175.github.io/ALTERWISSENSPLATFORM/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-altBlue hover:bg-altBlue-light text-white py-3 px-4 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark">
+                            <i class="fas fa-book mr-2"></i>
+                            Wissensplattform
+                        </a>
+                    </div>
+                </div>
+            `,
+            
+            'promille-rechner': `
+                <h3 class="text-xl font-heading font-bold mb-4">JUNGSINGULÄR ALTERUNGSSTOPP RECHNER</h3>
+                <p class="mb-4">Unsere spezialisierten Rechner helfen Ihnen, verschiedene Aspekte Ihrer Gesundheit und Ihres biologischen Alters zu verstehen und zu optimieren.</p>
+                
+                <div class="grid grid-cols-1 gap-6 mb-6">
+                    <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden">
+                        <div class="p-4 bg-altBlue text-white">
+                            <h4 class="font-heading font-semibold">Lebensalter-Rechner</h4>
+                            <p class="text-sm mt-1">Berechnen Sie Ihr biologisches Alter anhand verschiedener Gesundheitsparameter</p>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-4">Der Lebensalter-Rechner analysiert Ihre biologischen Daten und Lebensstilgewohnheiten, um Ihr geschätztes biologisches Alter zu ermitteln.</p>
+                            <a href="https://zaha175.github.io/LEBENSALTER-RECHNER/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                <i class="fas fa-calculator mr-2"></i>
+                                Lebensalter-Rechner öffnen
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden">
+                        <div class="p-4 bg-altBlue text-white">
+                            <h4 class="font-heading font-semibold">Alkoholkonsumrechner mit Diagramm</h4>
+                            <p class="text-sm mt-1">Verstehen Sie die Auswirkungen von Alkoholkonsum auf Ihren Alterungsprozess</p>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-4">Visualisieren Sie, wie sich verschiedene Alkoholkonsummuster auf Ihre zelluläre Alterung und Gesundheitsparameter auswirken können.</p>
+                            <a href="https://zaha175.github.io/MENGENACHPROMILLE/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                <i class="fas fa-chart-line mr-2"></i>
+                                Alkoholkonsumrechner öffnen
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden">
+                        <div class="p-4 bg-altBlue text-white">
+                            <h4 class="font-heading font-semibold">Promillerechner mit Diagramm</h4>
+                            <p class="text-sm mt-1">Berechnen Sie die Auswirkungen von Alkohol auf Ihren Körper</p>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-4">Erfahren Sie, wie sich der Alkoholabbau in Ihrem Körper auf Basis individueller Faktoren wie Gewicht, Geschlecht und Konsummenge gestaltet.</p>
+                            <a href="https://zaha175.github.io/PROMILLERECHNERDE/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                <i class="fas fa-wine-glass-alt mr-2"></i>
+                                Promillerechner öffnen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-neutral-100 dark:bg-neutral-900 p-4 rounded-lg">
+                    <h4 class="font-heading font-semibold mb-2">Empfehlung:</h4>
+                    <p class="text-neutral-700 dark:text-neutral-300">Für eine umfassende Analyse nutzen Sie alle drei Rechner und konsultieren Sie unseren KI-Assistenten, um persönliche Optimierungsstrategien zu erhalten.</p>
+                    <button onclick="openModal('ki-assistent')" class="btn-3d bg-altBlue hover:bg-altBlue-light text-white py-2 px-4 rounded-lg text-sm font-medium shadow-custom mt-3 transition-all duration-300 border-b-2 border-altBlue-dark inline-flex items-center">
+                        <i class="fas fa-robot mr-2"></i>KI-Assistenten befragen
+                    </button>
+                </div>
+            `,
+            
+            'mpu-quiz': `
+                <h3 class="text-xl font-heading font-bold mb-4">JUNGSINGULÄR ALTERUNGSSTOPP Quiz und Spiele</h3>
+                <p class="mb-4">Testen und erweitern Sie Ihr Wissen über Alterungsprozesse mit unseren interaktiven Quizzen und Spielen.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden">
+                        <div class="p-4 bg-altBlue text-white">
+                            <h4 class="font-heading font-semibold">Quiz zur Alterungsforschung</h4>
+                            <p class="text-sm mt-1">Testen Sie Ihr Wissen über die neuesten Erkenntnisse</p>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-4">Unser Quiz deckt die wichtigsten Bereiche der Alterungsforschung ab und hilft Ihnen, Wissenslücken zu erkennen.</p>
+                            <a href="https://zaha175.github.io/QUIZ1STOPP/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark w-full">
+                                <i class="fas fa-question-circle mr-2"></i>
+                                Quiz starten
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden">
+                        <div class="p-4 bg-altBlue text-white">
+                            <h4 class="font-heading font-semibold">Interaktives Alterungsstopp-Spiel</h4>
+                            <p class="text-sm mt-1">Lernen durch Spielen</p>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-4">Ein unterhaltsames Spiel, das Ihnen hilft, die wichtigsten Faktoren für ein längeres und gesünderes Leben zu verstehen.</p>
+                            <a href="https://zaha175.github.io/SPIEL1STOPPDE/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark w-full">
+                                <i class="fas fa-gamepad mr-2"></i>
+                                Spiel starten
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-neutral-100 dark:bg-neutral-900 p-4 rounded-lg mb-6">
+                    <h4 class="font-heading font-semibold mb-2">Vorteile des spielerischen Lernens:</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300">
+                        <li>Bessere Gedächtnisleistung durch emotionale Beteiligung</li>
+                        <li>Praktische Anwendung theoretischer Konzepte</li>
+                        <li>Erhöhte Motivation und regelmäßige Beschäftigung mit dem Thema</li>
+                        <li>Soziale Komponente durch Vergleich mit anderen Nutzern</li>
+                    </ul>
+                </div>
+                
+                <p class="text-center text-neutral-600 dark:text-neutral-400 italic">
+                    "Spielen ist eine der effektivsten Formen des Lernens - besonders wenn es um komplexe Zusammenhänge wie die Biologie der Alterung geht."
+                </p>
+                
+                <div class="mt-6 text-center">
+                    <a href="https://chatgpt.com/g/g-677af416fb60819181c3a699f2915aa2-alterungsstopp-berater" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-altBlue hover:bg-altBlue-light text-white py-3 px-6 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark">
+                        <i class="fas fa-robot mr-2"></i>
+                        Weitere Lernressourcen beim KI-Berater erfragen
+                    </a>
+                </div>
+            `,
+            
+            'gutachtersimulator': `
+                <h3 class="text-xl font-heading font-bold mb-4">JUNGSINGULÄR ALTERUNGSSTOPP SIMULATOR</h3>
+                <p class="mb-4">Unser KI-gestützter Simulator hilft Ihnen, verschiedene Lebensstil-Interventionen virtuell zu testen und ihre potenzielle Auswirkung auf Ihr biologisches Alter zu verstehen.</p>
+                
+                <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-5 mb-6">
+                    <h4 class="font-heading font-semibold mb-4 text-center">Wie der Simulator funktioniert</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-4 rounded-lg">
+                            <div class="text-primary text-3xl mb-2">
+                                <i class="fas fa-user-edit"></i>
+                            </div>
+                            <h5 class="font-medium mb-2">1. Daten eingeben</h5>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-300">Geben Sie Ihre aktuellen Gesundheitsdaten und Lebensstilgewohnheiten ein.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-4 rounded-lg">
+                            <div class="text-primary text-3xl mb-2">
+                                <i class="fas fa-sliders-h"></i>
+                            </div>
+                            <h5 class="font-medium mb-2">2. Interventionen wählen</h5>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-300">Experimentieren Sie mit verschiedenen Lebensstil-Änderungen und Interventionen.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-4 rounded-lg">
+                            <div class="text-primary text-3xl mb-2">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5 class="font-medium mb-2">3. Ergebnisse analysieren</h5>
+                            <p class="text-sm text-neutral-600 dark:text-neutral-300">Sehen Sie die prognostizierten Auswirkungen auf Ihr biologisches Alter über Zeit.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <a href="https://chatgpt.com/g/g-677af416fb60819181c3a699f2915aa2-alterungsstopp-berater" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-altBlue hover:bg-altBlue-light text-white py-3 px-6 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark mb-6">
+                        <i class="fas fa-robot mr-2"></i>
+                        ALTERUNGSSTOPP KI-SIMULATOR ÖFFNEN
+                    </a>
+                    
+                    <p class="text-neutral-600 dark:text-neutral-400">Der Simulator nutzt Daten aus tausenden wissenschaftlichen Studien, um fundierte Prognosen abzugeben. Die Ergebnisse dienen zu Bildungszwecken und ersetzen keine medizinische Beratung.</p>
+                </div>
+                
+                <div class="bg-neutral-100 dark:bg-neutral-900 p-4 rounded-lg mt-6">
+                    <h4 class="font-heading font-semibold mb-2">Einsatzmöglichkeiten:</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300">
+                        <li>Vergleich verschiedener Ernährungsstrategien (Intervallfasten, Ketogen, Mediterran)</li>
+                        <li>Simulation verschiedener Trainingsintensitäten und -modalitäten</li>
+                        <li>Analyse der Auswirkungen von Stressreduktion und verbesserten Schlafgewohnheiten</li>
+                        <li>Prognose der langfristigen Effekte von Nahrungsergänzungsmitteln</li>
+                    </ul>
+                </div>
+            `,
+            
+            'checkliste': `
+                <h3 class="text-xl font-heading font-bold mb-4">JUNGSINGULÄR ALTERUNGSSTOPP - Checkliste</h3>
+                <p class="mb-4">Nutzen Sie unsere umfassende Checkliste, um Ihren persönlichen Alterungsstopp-Plan zu erstellen und zu verfolgen.</p>
+                
+                <div class="video-container mb-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YPrF_JwF7kU?si=AKjYq_6RPOC2e3FY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden">
+                        <div class="p-4 bg-altBlue text-white">
+                            <h4 class="font-heading font-semibold">JUNGSINGULÄR Checkliste</h4>
+                            <p class="text-sm mt-1">Umfassende Vorlage für Ihren persönlichen Alterungsstopp-Plan</p>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-4">Mit dieser Checkliste können Sie alle relevanten Faktoren für ein längeres, gesünderes Leben systematisch bearbeiten.</p>
+                            <a href="https://zaha175.github.io/JUNGSOLITARCHECKLISTE/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark w-full">
+                                <i class="fas fa-clipboard-check mr-2"></i>
+                                Checkliste öffnen
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden">
+                        <div class="p-4 bg-altBlue text-white">
+                            <h4 class="font-heading font-semibold">Altersformel-Checkliste</h4>
+                            <p class="text-sm mt-1">Spezialisierte Liste mit mathematischem Alterungsmodell</p>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-4">Diese erweiterte Checkliste nutzt mathematische Modelle zur präziseren Einschätzung des biologischen Alters.</p>
+                            <a href="https://zaha175.github.io/CHECKLISTEALTERSFORMEL/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark w-full">
+                                <i class="fas fa-calculator mr-2"></i>
+                                Altersformel-Checkliste öffnen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-neutral-100 dark:bg-neutral-900 p-4 rounded-lg mb-6">
+                    <h4 class="font-heading font-semibold mb-2">Die wichtigsten Bereiche der Checklisten:</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 text-neutral-700 dark:text-neutral-300">
+                        <div class="flex items-start">
+                            <i class="fas fa-utensils mt-1 mr-2 text-primary"></i>
+                            <span>Ernährungsoptimierung</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-running mt-1 mr-2 text-primary"></i>
+                            <span>Bewegungsprotokolle</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-moon mt-1 mr-2 text-primary"></i>
+                            <span>Schlafqualität</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-spa mt-1 mr-2 text-primary"></i>
+                            <span>Stressmanagement</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-brain mt-1 mr-2 text-primary"></i>
+                            <span>Kognitive Gesundheit</span>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-heartbeat mt-1 mr-2 text-primary"></i>
+                            <span>Biomarker-Tracking</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <a href="https://chatgpt.com/g/g-677af416fb60819181c3a699f2915aa2-alterungsstopp-berater" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-altBlue hover:bg-altBlue-light text-white py-3 px-6 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark">
+                        <i class="fas fa-robot mr-2"></i>
+                        KI-Berater für individuellen Plan befragen
+                    </a>
+                </div>
+            `,
+            
+            'frageboegen': `
+                <h3 class="text-xl font-heading font-bold mb-4">JUNGSINGULÄR ALTERUNGSSTOPP, KI und die Zukunft der Menschheit</h3>
+                <p class="mb-4">Entdecken Sie, wie künstliche Intelligenz die Alterungsforschung revolutioniert und welche ethischen Fragen damit verbunden sind.</p>
+                
+                <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-5 mb-6">
+                    <h4 class="font-heading font-semibold mb-4">KI in der Alterungsforschung: Aktuelle Entwicklungen</h4>
+                    
+                    <div class="space-y-4">
+                        <p>Künstliche Intelligenz transformiert die Alterungsforschung auf mehreren Ebenen:</p>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+                                <i class="fas fa-dna"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="font-medium text-primary">Bioinformatik & Genomanalyse</h5>
+                                <p class="text-neutral-700 dark:text-neutral-300 text-sm">KI-Algorithmen identifizieren Muster in genomischen Daten, die mit Langlebigkeit und Alterung zusammenhängen.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+                                <i class="fas fa-pills"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="font-medium text-primary">Wirkstoffforschung</h5>
+                                <p class="text-neutral-700 dark:text-neutral-300 text-sm">KI beschleunigt die Entdeckung von Senolytika und anderen Wirkstoffen, die Alterungsprozesse beeinflussen können.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="font-medium text-primary">Personalisierte Interventionen</h5>
+                                <p class="text-neutral-700 dark:text-neutral-300 text-sm">KI-gestützte Analyse von Biomarkern ermöglicht maßgeschneiderte Anti-Aging-Strategien für den Einzelnen.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="font-medium text-primary">Vorhersagemodelle</h5>
+                                <p class="text-neutral-700 dark:text-neutral-300 text-sm">KI-basierte Prognosemodelle können das biologische Alter und potenzielle Langlebigkeit aus minimalen Datensätzen abschätzen.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <a href="https://gamma.app/docs/KILeitfaden-2ufgdivxc7n49d0" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-altBlue hover:bg-altBlue-light text-white py-3 px-4 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark w-full mb-4">
+                            <i class="fas fa-book mr-2"></i>
+                            KI-Leitfaden anzeigen
+                        </a>
+                        
+                        <div class="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-lg">
+                            <h4 class="font-heading font-semibold mb-2">Ethische Fragen:</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300 text-sm">
+                                <li>Wer sollte Zugang zu lebensverländernden Technologien haben?</li>
+                                <li>Wie geht die Gesellschaft mit einer alternden, aber gesunden Bevölkerung um?</li>
+                                <li>Welche unbeabsichtigten Folgen könnten durch massive Lebensverlängerung entstehen?</li>
+                                <li>Wie definieren wir "natürliches" Altern in einer technologisch fortschrittlichen Welt?</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <a href="https://zaha175.github.io/KICHATBOT/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-altBlue hover:bg-altBlue-light text-white py-3 px-4 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-altBlue-dark w-full mb-4">
+                            <i class="fas fa-robot mr-2"></i>
+                            KI-Chatbot öffnen
+                        </a>
+                        
+                        <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden">
+                            <img src="https://cdn.gamma.app/fhpleqvbjim2f32/abb0bf3a4e7f4f0e89f38b0c458eb992/original/th-7.jpeg" alt="KI und Zukunft der Menschheit" class="w-full h-40 object-cover">
+                            <div class="p-3">
+                                <p class="text-neutral-700 dark:text-neutral-300 text-sm">Interagieren Sie mit unserem spezialisierten KI-Chatbot, um mehr über die Zukunft der KI in der Alterungsforschung zu erfahren.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-center text-neutral-600 dark:text-neutral-400 italic">
+                    "Die Frage ist nicht, ob wir den Alterungsprozess beeinflussen können, sondern wie wir dies ethisch und gerecht gestalten."
+                </p>
+            `,
+            
+            'atemuebungen': `
+                <h3 class="text-xl font-heading font-bold mb-4">ATEMÜBUNGEN -- Entspannung und Fokus</h3>
+                <p class="mb-4">Nutzen Sie die Kraft des bewussten Atmens, um Stress zu reduzieren, Ihre Konzentration zu verbessern und den Alterungsprozess zu verlangsamen.</p>
+                
+                <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-5 mb-6">
+                    <h4 class="font-heading font-semibold mb-4 text-center">Wissenschaftliche Grundlagen</h4>
+                    
+                    <p class="mb-4">Studien zeigen, dass bewusstes Atmen direkte physiologische Auswirkungen hat:</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <h5 class="font-medium text-primary mb-2">Reduzierung oxidativen Stresses</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300 text-sm">Langsame, tiefe Atemtechniken senken die Produktion freier Radikale und unterstützen antioxidative Prozesse.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <h5 class="font-medium text-primary mb-2">Förderung der Telomerase-Aktivität</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300 text-sm">Regelmäßige Atemübungen können die Telomerase-Aktivität erhöhen und so zur Erhaltung der Telomere beitragen.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <h5 class="font-medium text-primary mb-2">Neuroplastizität verbessern</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300 text-sm">Atmungsbasierte Meditation fördert die Bildung neuer neuronaler Verbindungen und unterstützt die kognitive Gesundheit.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <h5 class="font-medium text-primary mb-2">Optimierung der HRV</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300 text-sm">Bewusstes Atmen kann die Herzratenvariabilität verbessern - ein wichtiger Biomarker für biologisches Alter und Stressresilienz.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <a href="https://zaha175.github.io/ATEMUBUNGEN/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-primary-dark w-full mb-4">
+                        <i class="fas fa-wind mr-2"></i>
+                        Interaktive Atemübungen öffnen
+                    </a>
+                    
+                    <div class="bg-neutral-100 dark:bg-neutral-900 p-4 rounded-lg">
+                        <h4 class="font-heading font-semibold mb-2">Empfohlene tägliche Praxis:</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300">
+                            <li>Morgens: 5 Minuten 4-7-8-Atmung für einen energiereichen Start</li>
+                            <li>Mittags: 2-3 Minuten Box-Breathing zur Konzentrationssteigerung</li>
+                            <li>Abends: 10 Minuten tiefe Bauchatmung zur Entspannung</li>
+                            <li>Bei Stress: Wechselatmung (Nadi Shodhana) für unmittelbare Beruhigung</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <iframe src="https://zaha175.github.io/ATEMUBUNGEN/" width="100%" height="400" frameborder="0" class="rounded-lg shadow-md mb-6"></iframe>
+                
+                <p class="text-center text-neutral-600 dark:text-neutral-400 italic">
+                    "Der Atem ist die Brücke zwischen Körper und Geist. Bewusstes Atmen ist der stärkste biologische Hebel, den wir jederzeit aktivieren können."
+                </p>
+            `,
+            
+            'ki-assistent': `
+                <h3 class="text-xl font-heading font-bold mb-4">JUNGSINGULÄR ALTERUNGSSTOPP KI BERATER</h3>
+                <p class="mb-4">Unser spezialisierter KI-Berater bietet Ihnen personalisierte Beratung zu allen Aspekten des Alterungsstopps und der Langlebigkeit.</p>
+                
+                <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-5 mb-6">
+                    <h4 class="font-heading font-semibold mb-4 text-center">Die Vorteile unseres KI-Beraters</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <div class="text-primary text-3xl mb-2 text-center">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h5 class="font-medium text-center mb-2">Umfassendes Wissen</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300 text-sm">Trainiert mit den aktuellsten wissenschaftlichen Erkenntnissen aus tausenden Studien zur Alterungsforschung.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <div class="text-primary text-3xl mb-2 text-center">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <h5 class="font-medium text-center mb-2">Personalisierte Beratung</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300 text-sm">Berücksichtigt Ihre individuellen Gesundheitsziele, Vorgeschichte und Präferenzen für maßgeschneiderte Empfehlungen.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <div class="text-primary text-3xl mb-2 text-center">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h5 class="font-medium text-center mb-2">24/7 Verfügbarkeit</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300 text-sm">Jederzeit erreichbar für Ihre Fragen - egal ob zu Ernährung, Bewegung, Schlaf oder Stressmanagement.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <div class="text-primary text-3xl mb-2 text-center">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5 class="font-medium text-center mb-2">Fortschrittsanalyse</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300 text-sm">Hilft Ihnen, Ihre Fortschritte zu verfolgen und Ihre Strategien basierend auf den erzielten Ergebnissen anzupassen.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <img src="https://cdn.gamma.app/fhpleqvbjim2f32/generated-images/zgH0CSi2wvTWUDv7JSSOF.jpg" alt="KI-Berater für Alterungsstopp" class="w-full h-64 object-cover rounded-lg shadow-md mb-4">
+                    
+                    <a href="https://chatgpt.com/g/g-677af416fb60819181c3a699f2915aa2-alterungsstopp-berater" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-primary-dark w-full">
+                        <i class="fas fa-robot mr-2"></i>
+                        ALTERUNGSSTOPP KI-BERATER ÖFFNEN
+                    </a>
+                </div>
+                
+                <div class="bg-neutral-100 dark:bg-neutral-900 p-4 rounded-lg">
+                    <h4 class="font-heading font-semibold mb-2">Beispiele für Fragen an den KI-Berater:</h4>
+                    <ul class="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300">
+                        <li>Welche Nahrungsergänzungsmittel sind für mein Altersprofil besonders empfehlenswert?</li>
+                        <li>Wie kann ich meine Telomere schützen und mein epigenetisches Alter verlangsamen?</li>
+                        <li>Welche Trainingsform ist optimal für die Mitochondrienfunktion?</li>
+                        <li>Wie interpretiere ich meine Blutwerte im Hinblick auf Alterungsprozesse?</li>
+                        <li>Welche neuesten Forschungsergebnisse gibt es zu Senolytika?</li>
+                    </ul>
+                </div>
+            `,
+            
+            'stresul': `
+                <h3 class="text-xl font-heading font-bold mb-4">Modul STRESS</h3>
+                <p class="mb-4">Stress ist einer der größten Alterungsbeschleuniger. Hier finden Sie evidenzbasierte Strategien zur Stressbewältigung und Methoden, um Ihre Stressresilienz zu erhöhen.</p>
+                
+                <div class="mb-6">
+                    <img src="https://cdn.gamma.app/fhpleqvbjim2f32/generated-images/Bx81A5Ct9oOUsc7eE0UWu.jpg" alt="Stress und Alterung" class="rounded-lg shadow-md w-full max-w-md mx-auto">
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-4">
+                        <h4 class="font-heading font-semibold mb-2 text-primary">Akute Stressbewältigung</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300">
+                            <li>4-7-8 Atemtechnik zur sofortigen Beruhigung</li>
+                            <li>Progressive Muskelentspannung</li>
+                            <li>Kognitive Neubewertung von Stresssituationen</li>
+                            <li>Achtsamkeitsbasierte Stressreduktion</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-4">
+                        <h4 class="font-heading font-semibold mb-2 text-primary">Langfristige Stressresilienz</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-neutral-700 dark:text-neutral-300">
+                            <li>Optimierung der HRV (Herzratenvariabilität)</li>
+                            <li>Regulierung des Cortisol-Rhythmus</li>
+                            <li>Anpassogene Pflanzenstoffe zur Stressanpassung</li>
+                            <li>Bewusstes Zeitmanagement und Prioritätensetzung</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-5 mb-6">
+                    <h4 class="font-heading font-semibold mb-3">Stress und zelluläre Alterung</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-center">
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <div class="text-primary text-2xl mb-1">
+                                <i class="fas fa-dna"></i>
+                            </div>
+                            <h5 class="font-medium text-sm mb-1">Telomerverkürzung</h5>
+                            <p class="text-xs text-neutral-600 dark:text-neutral-400">Chronischer Stress beschleunigt die Verkürzung der Telomere, was direkt mit zellulärer Alterung zusammenhängt.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <div class="text-primary text-2xl mb-1">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h5 class="font-medium text-sm mb-1">Inflamm-Aging</h5>
+                            <p class="text-xs text-neutral-600 dark:text-neutral-400">Stress erhöht chronische Entzündungsprozesse im Körper, einen Haupttreiber der Alterung.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <div class="text-primary text-2xl mb-1">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h5 class="font-medium text-sm mb-1">Mitochondriale Dysfunktion</h5>
+                            <p class="text-xs text-neutral-600 dark:text-neutral-400">Stress beeinträchtigt die Funktion der zellulären "Kraftwerke" und reduziert die Energieproduktion.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-neutral-200 dark:border-neutral-700 pt-4 mt-4">
+                    <h4 class="font-heading font-semibold mb-2">Empfohlene Tools:</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://zaha175.github.io/ATEMUBUNGEN/" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-custom transition-all duration-300 border-b-2 border-primary-dark">
+                            <i class="fas fa-wind mr-2"></i>
+                            Atemübungen
+                        </a>
+                        <a href="https://chatgpt.com/g/g-677af416fb60819181c3a699f2915aa2-alterungsstopp-berater" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-custom transition-all duration-300 border-b-2 border-primary-dark">
+                            <i class="fas fa-robot mr-2"></i>
+                            KI Stressberater
+                        </a>
+                    </div>
+                </div>
+            `,
+            
+            'arborul-mpu': `
+                <h3 class="text-xl font-heading font-bold mb-4">Entscheidungsbaum für Ihre Langlebigkeitsstrategie</h3>
+                <p class="mb-6">Finden Sie anhand unseres strukturierten Entscheidungsbaums heraus, welche Strategien für Ihre persönliche Situation am besten geeignet sind.</p>
+                
+                <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-5 mb-6">
+                    <h4 class="font-heading font-semibold mb-4 text-center">Ihr persönlicher Entscheidungsbaum:</h4>
+                    
+                    <div class="relative">
+                        <!-- Root Node -->
+                        <div class="mx-auto w-64 p-3 bg-primary text-white rounded-lg shadow-md text-center mb-4">
+                            <p class="font-medium">Wie alt sind Sie?</p>
+                            <div class="flex justify-center mt-2 space-x-2">
+                                <button class="px-2 py-1 bg-white text-primary rounded text-sm hover:bg-neutral-100 transition-colors">< 40</button>
+                                <button class="px-2 py-1 bg-white text-primary rounded text-sm hover:bg-neutral-100 transition-colors">40-60</button>
+                                <button class="px-2 py-1 bg-white text-primary rounded text-sm hover:bg-neutral-100 transition-colors">> 60</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Level 1 Nodes - Connected with lines -->
+                        <div class="flex justify-center space-x-4 mb-4">
+                            <div class="flex flex-col items-center">
+                                <div class="h-6 border-l border-neutral-400 dark:border-neutral-600"></div>
+                                <div class="w-48 p-3 bg-altBlue text-white rounded-lg shadow-md text-center">
+                                    <p class="font-medium">Präventiver Fokus</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="h-6 border-l border-neutral-400 dark:border-neutral-600"></div>
+                                <div class="w-48 p-3 bg-altBlue text-white rounded-lg shadow-md text-center">
+                                    <p class="font-medium">Ausgleichender Fokus</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="h-6 border-l border-neutral-400 dark:border-neutral-600"></div>
+                                <div class="w-48 p-3 bg-altBlue text-white rounded-lg shadow-md text-center">
+                                    <p class="font-medium">Regenerativer Fokus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white dark:bg-neutral-800 rounded-lg shadow-md p-5 mb-6">
+                    <h4 class="font-heading font-semibold mb-3">Hauptfaktoren für Ihre Entscheidung:</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <h5 class="font-medium text-primary mb-2">Chronologisches vs. Biologisches Alter</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300 text-sm">Ihr biologisches Alter (ermittelt durch Biomarker) kann sich wesentlich von Ihrem chronologischen Alter unterscheiden und sollte stärker gewichtet werden.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <h5 class="font-medium text-primary mb-2">Gesundheitszustand & Vorerkrankungen</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300 text-sm">Bestehende Erkrankungen erfordern spezialisierte Strategien, die sowohl das Alterungsmanagement als auch die Grunderkrankung berücksichtigen.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <h5 class="font-medium text-primary mb-2">Lebensstil & Bereitschaft zur Änderung</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300 text-sm">Die effektivste Strategie ist diejenige, die Sie konsequent umsetzen können. Berücksichtigen Sie Ihren Alltag und realistische Änderungsmöglichkeiten.</p>
+                        </div>
+                        
+                        <div class="bg-neutral-50 dark:bg-neutral-700 p-3 rounded-lg">
+                            <h5 class="font-medium text-primary mb-2">Familiäre Prädisposition</h5>
+                            <p class="text-neutral-700 dark:text-neutral-300 text-sm">Ihre genetische Veranlagung beeinflusst, welche Alterungsfaktoren für Sie besonders relevant sind und gezielt adressiert werden sollten.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="mb-4">Für eine detaillierte und personalisierte Analyse empfehlen wir ein Gespräch mit unserem KI-Berater, der Ihnen auf Basis Ihrer individuellen Situation maßgeschneiderte Empfehlungen geben kann.</p>
+                
+                <div class="flex justify-center mt-6">
+                    <a href="https://chatgpt.com/g/g-677af416fb60819181c3a699f2915aa2-alterungsstopp-berater" target="_blank" rel="noopener" class="btn-3d inline-flex items-center justify-center bg-primary hover:bg-primary-dark text-white py-3 px-6 rounded-lg text-base font-medium shadow-custom transition-all duration-300 border-b-4 border-primary-dark">
+                        <i class="fas fa-robot mr-2"></i>
+                        Personalisierte Beratung starten
+                    </a>
+                </div>
+            `
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme toggle functionality
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            
+            // Check for saved theme preference or respect OS preference
+            if (localStorage.getItem('theme') === 'dark' || 
+                (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+            
+            // Listen for OS theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (!localStorage.getItem('theme')) {
+                    if (e.matches) {
+                        document.documentElement.classList.add('dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                    }
+                }
+            });
+            
+            // Theme toggle button click handler
+            themeToggleBtn.addEventListener('click', function() {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+            
+            // Modal functionality
+            const modal = document.getElementById('main-modal');
+            const modalOverlay = document.getElementById('modal-overlay');
+            const modalContent = document.getElementById('modal-content');
+            const modalTitle = document.getElementById('modal-title');
+            const modalCloseButtons = document.querySelectorAll('.modal-close');
+            
+            // Open modal with specific content
+            window.openModal = function(contentId) {
+                // Set the title based on content ID
+                const titles = {
+                    'header': 'Willkommen bei JUNGSINGULÄR',
+                    'ablauf': 'Ablauf der Vorbereitung',
+                    'leistungstests': 'Reaktionstests',
+                    'mpu-qa': 'Fragen und Antworten',
+                    'promille-rechner': 'Alterungsstopp Rechner',
+                    'mpu-quiz': 'Quizze und Spiele',
+                    'gutachtersimulator': 'Alterungsstopp Simulator',
+                    'checkliste': 'Checkliste',
+                    'frageboegen': 'KI und die Zukunft der Menschheit',
+                    'atemuebungen': 'Atemübungen',
+                    'ki-assistent': 'Alterungsstopp KI Berater',
+                    'stresul': 'Stressmanagement',
+                    'arborul-mpu': 'Entscheidungsbaum'
+                };
+                
+                modalTitle.textContent = titles[contentId] || 'Information';
+                
+                // Show loading state
+                modalContent.innerHTML = `
+                    <div class="animate-pulse">
+                        <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-4"></div>
+                        <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-1/2 mb-4"></div>
+                        <div class="h-32 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
+                        <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6 mb-2"></div>
+                        <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-4/6 mb-2"></div>
+                        <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/6 mb-4"></div>
+                        <div class="h-10 bg-gray-200 dark:bg-gray-700 rounded w-1/4 mt-6"></div>
+                    </div>
+                `;
+                
+                // Show modal
+                modal.classList.remove('hidden');
+                modal.classList.add('modal-visible');
+                modalOverlay.classList.remove('hidden');
+                
+                // Prevent body scrolling when modal is open
+                document.body.style.overflow = 'hidden';
+                
+                // Load content with slight delay to show loading animation
+                setTimeout(function() {
+                    if (modalContents[contentId]) {
+                        modalContent.innerHTML = modalContents[contentId];
+                    } else {
+                        modalContent.innerHTML = `
+                            <div class="text-center py-8">
+                                <i class="fas fa-exclamation-triangle text-yellow-500 text-4xl mb-4"></i>
+                                <h4 class="text-xl font-bold mb-2">Inhalt nicht verfügbar</h4>
+                                <p class="text-neutral-600 dark:text-neutral-400">Der Inhalt für "${titles[contentId] || contentId}" wird momentan aktualisiert. Bitte versuchen Sie es später erneut.</p>
+                                <button onclick="closeModal()" class="mt-4 btn-3d bg-primary hover:bg-primary-dark text-white py-2 px-4 rounded-lg text-sm font-medium shadow-sm border-b-2 border-primary-dark">
+                                    Zurück
+                                </button>
+                            </div>
+                        `;
+                    }
+                }, 500);
+            };
+            
+            // Close modal function
+            window.closeModal = function() {
+                modal.classList.add('hidden');
+                modal.classList.remove('modal-visible');
+                modalOverlay.classList.remove('hidden');
+                modalOverlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            };
+            
+            // Close modal buttons
+            modalCloseButtons.forEach(button => {
+                button.addEventListener('click', closeModal);
+            });
+            
+            // Close modal when clicking on overlay
+            modalOverlay.addEventListener('click', closeModal);
+            
+            // Chatbot toggle functionality
+            const chatbotToggle = document.getElementById('chatbot-toggle');
+            const chatbotContainer = document.getElementById('chatbot-container');
+            const closeChatBtn = document.getElementById('close-chat');
+            const chatInput = document.getElementById('chat-input');
+            const sendBtn = document.getElementById('send-btn');
+            const chatMessages = document.getElementById('chat-messages');
+            
+            // Toggle chatbot visibility
+            chatbotToggle.addEventListener('click', function() {
+                if (chatbotContainer.classList.contains('hidden')) {
+                    chatbotContainer.classList.remove('hidden');
+                    chatbotContainer.classList.add('animate-fade-in');
+                    chatInput.focus();
+                } else {
+                    chatbotContainer.classList.add('hidden');
+                }
+            });
+            
+            // Close chat button
+            closeChatBtn.addEventListener('click', function() {
+                chatbotContainer.classList.add('hidden');
+            });
+            
+            // Send chat message
+            function sendChatMessage() {
+                const message = chatInput.value.trim();
+                if (message) {
+                    // Add user message to chat
+                    appendUserMessage(message);
+                    chatInput.value = '';
+                    
+                    // Show typing indicator
+                    showTypingIndicator();
+                    
+                    // Use Poe API to send the message
+                    if (window.Poe) {
+                        const handlerId = 'chat-' + Date.now();
+                        
+                        // Register handler for bot responses
+                        window.Poe.registerHandler(handlerId, (result) => {
+                            if (result.responses && result.responses.length > 0) {
+                                const response = result.responses[0];
+                                
+                                if (response.status === 'complete' || response.status === 'incomplete') {
+                                    // Remove typing indicator and show response
+                                    removeTypingIndicator();
+                                    
+                                    // Update or create bot message
+                                    const botMessageEl = document.querySelector(`[data-message-id="${response.messageId}"]`);
+                                    if (botMessageEl) {
+                                        botMessageEl.innerHTML = marked.parse(response.content);
+                                    } else {
+                                        appendBotMessage(response.content, response.messageId);
+                                    }
+                                } else if (response.status === 'error') {
+                                    // Handle error
+                                    removeTypingIndicator();
+                                    appendErrorMessage("Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.");
+                                }
+                            }
+                        });
+                        
+                        // Send message to Claude
+                        try {
+                            window.Poe.sendUserMessage("@Claude-3.7-Sonnet " + message, {
+                                handler: handlerId,
+                                stream: true,
+                                openChat: false
+                            }).catch(error => {
+                                removeTypingIndicator();
+                                appendErrorMessage("Nachricht konnte nicht gesendet werden: " + error.message);
+                            });
+                        } catch (error) {
+                            removeTypingIndicator();
+                            appendErrorMessage("Fehler beim Senden der Nachricht: " + error.message);
+                            
+                            // Fallback response if Poe API is not available
+                            setTimeout(() => {
+                                appendBotMessage("Es tut mir leid, ich kann Ihre Anfrage derzeit nicht bearbeiten. Die Funktion ist noch in Entwicklung. Bitte versuchen Sie später erneut.");
+                            }, 1000);
+                        }
+                    } else {
+                        // Fallback for when Poe API is not available
+                        setTimeout(() => {
+                            removeTypingIndicator();
+                            appendBotMessage("Ich bin derzeit im Offline-Modus. Besuchen Sie bitte unseren KI-Assistenten auf der Hauptseite für eine vollständige Beratung.");
+                        }, 1000);
+                    }
+                }
+            }
+            
+            // Append user message to chat
+            function appendUserMessage(message) {
+                const messageEl = document.createElement('div');
+                messageEl.className = 'user-message chat-message ml-auto';
+                messageEl.innerHTML = `<p>${escapeHtml(message)}</p>`;
+                chatMessages.appendChild(messageEl);
+                scrollToBottom();
+            }
+            
+            // Append bot message to chat
+            function appendBotMessage(message, messageId = '') {
+                const messageEl = document.createElement('div');
+                messageEl.className = 'bot-message chat-message';
+                if (messageId) {
+                    messageEl.setAttribute('data-message-id', messageId);
+                }
+                messageEl.innerHTML = marked.parse(message);
+                chatMessages.appendChild(messageEl);
+                scrollToBottom();
+            }
+            
+            // Append error message
+            function appendErrorMessage(message) {
+                const messageEl = document.createElement('div');
+                messageEl.className = 'bot-message chat-message bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300';
+                messageEl.innerHTML = `<p>${escapeHtml(message)}</p>`;
+                chatMessages.appendChild(messageEl);
+                scrollToBottom();
+            }
+            
+            // Show typing indicator
+            function showTypingIndicator() {
+                const typingEl = document.createElement('div');
+                typingEl.className = 'typing-indicator mr-auto';
+                typingEl.id = 'typing-indicator';
+                typingEl.innerHTML = `
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                `;
+                chatMessages.appendChild(typingEl);
+                scrollToBottom();
+            }
+            
+            // Remove typing indicator
+            function removeTypingIndicator() {
+                const typingEl = document.getElementById('typing-indicator');
+                if (typingEl) {
+                    typingEl.remove();
+                }
+            }
+            
+            // Scroll chat to bottom
+            function scrollToBottom() {
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+            
+            // Escape HTML to prevent XSS
+            function escapeHtml(unsafe) {
+                return unsafe
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+            }
+            
+            // Send button click handler
+            sendBtn.addEventListener('click', sendChatMessage);
+            
+            // Send message on Enter key
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendChatMessage();
+                }
+            });
+            
+            // Help button functionality
+            const helpBtn = document.getElementById('help-btn');
+            const helpModal = document.getElementById('help-modal');
+            const closeHelpBtn = document.getElementById('close-help');
+            
+            helpBtn.addEventListener('click', function() {
+                helpModal.classList.remove('hidden');
+                modalOverlay.classList.remove('hidden');
+            });
+            
+            closeHelpBtn.addEventListener('click', function() {
+                helpModal.classList.add('hidden');
+                modalOverlay.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
